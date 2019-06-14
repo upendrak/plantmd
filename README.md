@@ -36,18 +36,17 @@ $ docker run -v $PWD:/data -w /data --rm -p 5000:5000 keras_flask_app
 
 ### Pull and run a built-image from Docker hub without building the image
 ```shell
-$ git clone https://github.com/upendrak/Disease_Predictor
-$ cd Disease_Predictor
+$ git clone https://github.com/upendrak/Disease_Predictor.git && cd Disease_Predictor
+$ wget -O models/AlexNetModel.hdf5 https://de.cyverse.org/dl/d/555373A4-7A0E-48C2-A09B-B1DE8BE7915A/AlexNetModel.hdf5
 $ docker run -v $PWD:/data -w /data --rm -p 5000:5000 upendradevisetty/diseasepredictor:1.0
 ```
-Open http://0.0.0.0:5000/ after waiting for a minute to install in the container.
+Open http://0.0.0.0:5000/ after waiting for few seconds for the model to load.
 
 ## Non-Docker Installation (Not recommended)
 
 ### Clone the repo
 ```shell
-$ git clone https://github.com/upendrak/Disease_Predictor.git
-$ cd Disease_Predictor
+$ git clone https://github.com/upendrak/Disease_Predictor.git && cd Disease_Predictor
 $ wget -O models/AlexNetModel.hdf5 https://de.cyverse.org/dl/d/555373A4-7A0E-48C2-A09B-B1DE8BE7915A/AlexNetModel.hdf5
 ```
 
@@ -66,8 +65,6 @@ Make sure you have the following installed:
 - gevent
 
 ### Run with Python
-
-Python 2.7 or 3.5+ are supported and tested (Python 2.7 is not recommended)
 
 ```shell
 $ python app.py
