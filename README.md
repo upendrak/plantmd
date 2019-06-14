@@ -1,10 +1,10 @@
 # Deploy Disease Predict Keras Model with Flask as Web App 
 
-[![](![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg))]()
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-![Docker Pulls](https://img.shields.io/docker/pulls/upendradevisetty/diseasepredictor.svg)(https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
 [![Docker Stars](https://img.shields.io/docker/stars/evolinc/rmta.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/upendradevisetty/diseasepredictor.svg)(https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
 
 ## Getting started
 
@@ -48,6 +48,7 @@ Open http://0.0.0.0:5000/ after waiting for a minute to install in the container
 ```shell
 $ git clone https://github.com/upendrak/Disease_Predictor.git
 $ cd Disease_Predictor
+$ wget -O models/AlexNetModel.hdf5 https://de.cyverse.org/dl/d/555373A4-7A0E-48C2-A09B-B1DE8BE7915A/AlexNetModel.hdf5
 ```
 
 ### Install requirements
