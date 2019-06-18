@@ -26,8 +26,8 @@ app = Flask(__name__)
 # app.config['BASIC_AUTH_PASSWORD'] = 'bar'
 # app.config['BASIC_AUTH_FORCE'] = True
 # basic_auth = BasicAuth(app)
+# app.config['BASIC_AUTH_FORCE'] = True
 
-app.config['BASIC_AUTH_FORCE'] = True
 # Model saved with Keras model.save()
 MODEL_PATH = "models/AlexNetModel.hdf5"
 
