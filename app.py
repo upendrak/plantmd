@@ -16,17 +16,9 @@ from keras.applications.imagenet_utils import decode_predictions
 from flask import Flask, redirect, url_for, request, render_template, jsonify
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
-# from flask_basicauth import BasicAuth
 
 # Define a flask app
 app = Flask(__name__)
-
-# # Auth
-# app.config['BASIC_AUTH_USERNAME'] = 'foo'
-# app.config['BASIC_AUTH_PASSWORD'] = 'bar'
-# app.config['BASIC_AUTH_FORCE'] = True
-# basic_auth = BasicAuth(app)
-# app.config['BASIC_AUTH_FORCE'] = True
 
 # Model saved with Keras model.save()
 MODEL_PATH = "models/AlexNetModel.hdf5"
