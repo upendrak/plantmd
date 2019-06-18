@@ -25,7 +25,7 @@ input[type="file"] {
     padding: 12px 30px;
     background: #39D2B4;
     color: #fff;
-    font-size: 0.5em;
+    font-size: 1em;
     transition: all .4s;
     cursor: pointer;
 }
