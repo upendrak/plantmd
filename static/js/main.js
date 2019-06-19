@@ -47,7 +47,7 @@ $(document).ready(function () {
            $('#result').append('Predictions: ');
            for (var i in new_data){
              var _html = `
-               <p>${new_data[i].name}: ${new_data[i].val}</p></font>
+               <p>${new_data[i].name}: ${new_data[i].val}</p>
              `
               $('#result').append(_html);
            }
