@@ -31,23 +31,28 @@ $(document).ready(function () {
         // Show loading animation
         $(this).hide();
         $('.loader').show();
-
-        // Make prediction by calling api /predict
         $.ajax({
-            type: 'POST',
-            url: '/predict',
-            data: form_data,
-            contentType: false,
-            cache: false,
-            processData: false,
-            async: true,
-            success: function (data) {
-                // Get and display the result
-                $('.loader').hide();
-                $('#result').fadeIn(600);
-                $('#result').text(' Prediction:  ' + data);
-                console.log('Success!');
-            },
+         type: 'POST',
+         url: '/predict',
+         data: form_data,
+         contentType: false,
+         cache: false,
+         processData: false,
+         async: true,
+         success: function (data) {
+            // Get and display the result
+           $('.loader').hide();
+           $('#result').fadeIn(600);
+           var new_data = JSON.parse(data.payload);
+           $('#result').append('Predictions: ');
+           for (var i in new_data){
+             var _html = `
+               <p>${new_data[i].name}: ${new_data[i].val}</p>
+             `
+              $('#result').append(_html);
+           }
+           console.log('Success!');
+          },
         });
     });
 
