@@ -67,8 +67,26 @@ def upload():
         file_path = os.path.join(
             basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
+
         result = model_predict(file_path, model)
-        return jsonify({'payload':json.dumps([{'name':a, 'val':b} for a, b in result])})
+
+        result2 = dict(result)
+        top_hit = list(result2.keys())[0]
+        top_val = list(result2.values())[0]
+        dis_file = "models/disease_description.csv"
+        result_final = {}
+        with open(dis_file, 'r') as fh_in:
+            for line in fh_in:
+                line = line.strip().split(",")
+                result_final[line[0]] = line[1]
+        result = {}
+        for kee, val in result_final.items():
+            if top_hit in kee:
+                new = top_hit + " - "+ str(top_val)
+                result[new] = val
+        
+        # Prediction + Description
+        return jsonify({'payload':json.dumps([{'name':kee, 'val':val} for kee, val in result.items()])})
 
     return None
 

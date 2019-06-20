@@ -43,11 +43,12 @@ $(document).ready(function () {
             // Get and display the result
            $('.loader').hide();
            $('#result').fadeIn(600);
+
            var new_data = JSON.parse(data.payload);
            $('#result').append('Predictions: ');
            for (var i in new_data){
              var _html = `
-               <p>${new_data[i].name}: ${new_data[i].val}</p>
+               <p>${new_data[i].name}: <br />${new_data[i].val}</p>
              `
               $('#result').append(_html);
            }
