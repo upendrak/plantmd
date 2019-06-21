@@ -67,6 +67,7 @@ def upload():
         file_path = os.path.join(
             basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
+        file_name = re.sub("uploads/", "", file_path)
 
         result = model_predict(file_path, model)
 
