@@ -45,12 +45,13 @@ $(document).ready(function () {
            $('#result').fadeIn(600);
 
            var new_data = JSON.parse(data.payload);
-           $('#result').append('Prediction:');
+           $('#result').append('Predictions:');
            for (var i in new_data){
              var _html = `
-               <p>${new_data[i].name}</p>
+               <p style="font-size:80%;">${new_data[i].name}</p>
                
-               <p>${new_data[i].val}</p>
+               <h3 style="font-size:100%;">Description:</h3>
+               <p style="font-size:80%;">${new_data[i].val}</p>
              `
               $('#result').append(_html);
            }
