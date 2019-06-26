@@ -12,6 +12,7 @@ $(document).ready(function () {
                 $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
+                console.log(e.target.input.files[0].name);
             }
             reader.readAsDataURL(input.files[0]);
         }
