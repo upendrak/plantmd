@@ -83,7 +83,7 @@ def upload():
         result = {}
         for kee, val in result_final.items():
             if top_hit in kee:
-                new = top_hit + " - "+ str(top_val)
+                new = top_hit + " : "+ str(top_val) + "%"
                 result[new] = val
         
         # Prediction + Description
