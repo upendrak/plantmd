@@ -1,4 +1,4 @@
-# Deploy Disease Predict Keras Model with Flask as Web App 
+# Deploy PlantMD Keras Model with Flask as Web App 
 
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
@@ -11,13 +11,13 @@
 - Clone this repo 
 - Install requirements (Or use Docker)
 - Run the script (Or run the Docker container)
-- Check http://0.0.0.0:5000/
+- Check http://localhost:5000/
 - Done! :tada:
 
 :point_down:Screenshot:
 
 <p align="center">
-  <img src="https://i.postimg.cc/4xjy7cN8/disease-predict-demo.png" width="600px" alt="">
+  <img src="https://i.postimg.cc/fTMmX7p9/plantmd-apple-scab2.png" width="600px" alt="">
 </p>
 
 ------------------
