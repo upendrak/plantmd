@@ -2,3 +2,4 @@ uploads/*.jpg
 uploads/*.png
 models/*.h5
 models/*.hdf5
+__pycache__
