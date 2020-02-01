@@ -1,22 +1,24 @@
-FROM python:slim-stretch
-MAINTAINER Upendra Devisetty <upendrakumar.devisetty@gmail.com>
-LABEL Description "This App is meant for Disease prediction from Keras model"
+FROM python:3.7.4-slim-stretch
 
-# Update the OS
-RUN apt-get update
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
-# Copy the files into the container
-COPY . /usr/src/app
+RUN mkdir -p /root/.streamlit
 
-# Set the working directory
-WORKDIR /usr/src/app
+RUN bash -c 'echo -e "\
+[general]\n\
+email = \"\"\n\
+" > /root/.streamlit/credentials.toml'
 
-# Install the dependencies
-RUN pip install Werkzeug Flask numpy Keras gevent pillow h5py tensorflow
+RUN bash -c 'echo -e "\
+[server]\n\
+enableCORS = false\n\
+" > /root/.streamlit/config.toml'
 
-# Expose the port
-EXPOSE 5000
+COPY . .
+RUN pip3 install -r requirements.txt
 
-# Run the app
-CMD [ "python" , "app.py"]
 
+EXPOSE 8501
+
+ENTRYPOINT ["streamlit", "run", "demo.py"]
