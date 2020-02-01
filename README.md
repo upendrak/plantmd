@@ -1,4 +1,4 @@
-# Deploy PlantMD Keras Model with Streamlit as Web App 
+# Deploy PlantMD with Streamlit as Web App 
 
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
@@ -10,12 +10,12 @@
 
 - Clone this repo 
 - Install requirements (Or use Docker)
-- Run the script after installing the dependencies (Or run the Docker container)
+- Run the script with Streamlit after installing the dependencies (Or run the Docker container)
 - Upload a test image
-- Check http://localhost:8502/
+- Check http://localhost:8501/
 - Done! :tada:
 
-:point_down:Screenshot:
+:point_down:Screenshots:
 
 <p align="center">
   <img src="https://i.postimg.cc/K8yJxgj7/plantmd-ss-1.png" width="600px" alt="">
