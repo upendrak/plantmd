@@ -2,9 +2,9 @@
 
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![Docker Pulls](https://img.shields.io/docker/pulls/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
-[![Docker Stars](https://img.shields.io/docker/stars/evolinc/rmta.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/diseasepredictor/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/plantmd/)
+[![Docker Stars](https://img.shields.io/docker/stars/evolinc/rmta.svg)](https://hub.docker.com/r/upendradevisetty/plantmd/)
+<a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
 
 ## Getting started
 
@@ -38,21 +38,11 @@ $ docker run --rm -p 8501:8501 upendradevisetty/diseasepredictor:1.0
 ```
 Open http://localhost:8501/ on your computer to load the dashboard
 
-## Non-Docker Installation (Not recommended)
+## Run on CyVerse Discovery Environment
 
-### Clone the repo
-```shell
-$ git clone https://github.com/upendrak/Disease_Predictor.git && cd Disease_Predictor
-```
+> Alternatively you can run the Plantmd on CyVerse Discovery Environment. However you need to register to CyVerse before you can use. More information about user registration can be found [here](https://user.cyverse.org/)
 
-### Install requirements after creating a virtual environment
-```shell
-$ python3 -m vevn plantmd_venv
-$ source plantmd_venv/bin/activate
-$ pip3 install -r requirements.txt
-```
+> After you register, you click the below button to launch Plantmd on CyVerse [Discovery Environment](https://de.cyverse.org/)
 
-### Run with Streamlit
-```shell
-$ streamlit run demo.py
-```
+<a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
+
