@@ -12,10 +12,9 @@ The PlantMD is based on transfer learning method with VGG16 architecutre that ha
 
 ## Getting started
 
-- Clone this repo 
-- Install Docker and launch Docker container (or use Discovery Environment)
-- Upload a test image
+- Install Docker and launch Plantmd Docker container (or use Discovery Environment)
 - Check http://localhost:8501/ (or use Discovery Environment)
+- Upload a test image
 - Done! :tada:
 
 :point_down:Screenshots:
@@ -32,7 +31,7 @@ The PlantMD is based on transfer learning method with VGG16 architecutre that ha
 
 ## Docker Installation
 
-> Docker can be installed on any of three platform using the instructions from [Docker](https://docs.docker.com/engine/installation/) website. You can also try [Play-With-Docker](http://labs.play-with-docker.com/) without installing Docker on your computer 
+Docker can be installed on any of three platform using the instructions from [Docker](https://docs.docker.com/engine/installation/) website. You can also try [Play-With-Docker](http://labs.play-with-docker.com/) without installing Docker on your computer 
 
 ### Pull and run a built-image from Docker hub without building the image 
 ```shell
@@ -43,10 +42,12 @@ Open http://localhost:8501/ on your computer to load the dashboard
 
 ## Run on CyVerse Discovery Environment
 
-> Alternatively you can run the Plantmd on CyVerse Discovery Environment. However you need to register to CyVerse before you can use. More information about user registration can be found [here](https://user.cyverse.org/)
+Alternatively you can run the Plantmd on CyVerse Discovery Environment.
 
-> After you register, you click the below button to launch Plantmd on CyVerse [Discovery Environment](https://de.cyverse.org/)
+>Note: You need to register to CyVerse before you can use. More information about user registration can be found [here](https://user.cyverse.org/)
+
+After you register, you click the button below to launch Plantmd on CyVerse [Discovery Environment](https://de.cyverse.org/)
 
 <a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
 
-<a href="https://www.loom.com/share/40aa6f0a4b1f4c4eb1aa7916a52e4d6f"> <p>upendrak/plantmd: Image-based plant disease prediction using CNNs - Watch Video</p> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/40aa6f0a4b1f4c4eb1aa7916a52e4d6f-with-play.gif"> </a>
+<a href="https://www.loom.com/share/40aa6f0a4b1f4c4eb1aa7916a52e4d6f"> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/40aa6f0a4b1f4c4eb1aa7916a52e4d6f-with-play.gif"> </a>
