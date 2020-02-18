@@ -49,4 +49,4 @@ Open http://localhost:8501/ on your computer to load the dashboard
 
 <a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
 
-https://www.loom.com/share/40aa6f0a4b1f4c4eb1aa7916a52e4d6f
+<a href="https://www.loom.com/share/40aa6f0a4b1f4c4eb1aa7916a52e4d6f"> <p>upendrak/plantmd: Image-based plant disease prediction using CNNs - Watch Video</p> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/40aa6f0a4b1f4c4eb1aa7916a52e4d6f-with-play.gif"> </a>
