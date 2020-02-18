@@ -9,10 +9,9 @@
 ## Getting started
 
 - Clone this repo 
-- Install requirements (Or use Docker)
-- Run the script with Streamlit after installing the dependencies (Or run the Docker container)
+- Install Docker and launch Docker container (or use Discovery Environment)
 - Upload a test image
-- Check http://localhost:8501/
+- Check http://localhost:8501/ (or use Discovery Environment)
 - Done! :tada:
 
 :point_down:Screenshots:
