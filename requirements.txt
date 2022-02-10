@@ -1,4 +1,4 @@
 google-auth-oauthlib==0.4.1
 keras==2.2.5
 streamlit==0.53.0
-tensorflow==1.15.2
+tensorflow==2.5.3
