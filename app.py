@@ -57,7 +57,8 @@ if uploaded_file is not None:
     st.write("### Description")
     st.info(f"**{header}**\n\n{body}")
 else:
-    st.markdown("""
+    st.markdown(
+        """
         PlantMD is a web app that can rapidly and accurately diagnose plant diseases
 
         👈 Upload an image on the left to see how PlantMD can diagnose diseases for you!
@@ -65,4 +66,5 @@ else:
         ### Want to learn more about PlantMD?
 
         - Checkout the [GitHub repo](https://github.com/upendrak/plantmd)
-        """)
+        """
+    )
