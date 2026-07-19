@@ -1,4 +1,6 @@
-google-auth-oauthlib==0.4.1
-keras==2.2.5
-streamlit==0.53.0
-tensorflow==2.7.2
+# Streamlit Community Cloud and Hugging Face Spaces both auto-detect Python
+# dependencies from a root-level requirements.txt, not from pyproject.toml.
+# `-e .` installs this project itself (pulling in the pinned dependencies
+# declared in pyproject.toml, the actual single source of truth), so there is
+# nothing here to keep in sync by hand.
+-e .

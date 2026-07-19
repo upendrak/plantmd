@@ -1,0 +1,13 @@
+.git
+.github
+tests/
+docs/
+images/
+example_images/
+.venv
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.pre-commit-config.yaml
+README.md

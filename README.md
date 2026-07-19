@@ -1,23 +1,19 @@
-# Plantmd
+# PlantMD
 
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3.svg)]()
+[![CI](https://github.com/upendrak/plantmd/actions/workflows/ci.yml/badge.svg)](https://github.com/upendrak/plantmd/actions/workflows/ci.yml)
+[![PyPI - Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![Docker Pulls](https://img.shields.io/docker/pulls/upendradevisetty/diseasepredictor.svg)](https://hub.docker.com/r/upendradevisetty/plantmd/)
-[![Docker Stars](https://img.shields.io/docker/stars/evolinc/rmta.svg)](https://hub.docker.com/r/upendradevisetty/plantmd/)
-<a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
 
-PlantMD is a image-based disease prediction app that can be installed locally using Docker or launched through CyVerse Discovery Environment. The webapp currently displays two outputs. The prediction % which indicates how confident the prediction is and a brief description of the disease. 
+PlantMD is an image-based plant disease diagnosis web app. Upload a photo of a
+leaf and it predicts the most likely disease (or healthy) class out of 38
+categories, along with a confidence score and a short description.
 
-The PlantMD is based on transfer learning method with VGG16 architecutre that has been trained on a dataset consisting of 54,000 labelled RGB images of both healthy and diseased leaves from [PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset) website. Since the data is highly unbalanced for the 38 different classes of diseases, a custom script to augment the data. The data augmentation mainly consists of rotating the image into different angles as shown here. This resulted in 87,000 RGB images that are highly balanced compared to original data. After data augmentation, the data was split into training and validation datasets in 80-20 ratio.
+The model is a VGG16 transfer-learning network trained on the 54,000-image
+[PlantVillage](https://github.com/spMohanty/PlantVillage-Dataset) dataset,
+augmented (mainly via rotation) to ~87,000 images to balance the originally
+skewed class distribution, then split 80/20 into training and validation sets.
 
-## Getting started
-
-- Install Docker and launch Plantmd Docker container (or use Discovery Environment)
-- Check http://localhost:8501/ (or use Discovery Environment)
-- Upload a test image
-- Done! :tada:
-
-:point_down:Screenshots:
+:point_down: Screenshots:
 
 <p align="center">
   <img src="https://i.postimg.cc/K8yJxgj7/plantmd-ss-1.png" width="600px" alt="">
@@ -29,25 +25,71 @@ The PlantMD is based on transfer learning method with VGG16 architecutre that ha
 
 ------------------
 
-## Docker Installation
+## Project layout
 
-Docker can be installed on any of three platform using the instructions from [Docker](https://docs.docker.com/engine/installation/) website. You can also try [Play-With-Docker](http://labs.play-with-docker.com/) without installing Docker on your computer 
-
-### Pull and run a built-image from Docker hub without building the image 
-```shell
-$ git clone https://github.com/upendrak/Disease_Predictor.git && cd Disease_Predictor
-$ docker run --rm -p 8501:8501 upendradevisetty/diseasepredictor:1.0 
 ```
-Open http://localhost:8501/ on your computer to load the dashboard
+app.py                          # Streamlit entrypoint
+src/plantmd/
+  inference.py                  # preprocessing + top-k prediction
+  descriptions.py                # disease description lookup
+  model.py                        # cached model loading
+models/
+  model_vgg16_2.hdf5             # trained weights (Git LFS)
+  disease_description.csv        # per-class description text
+tests/                           # pytest suite (no real model weights required)
+```
 
-## Run on CyVerse Discovery Environment
+Dependencies are declared in `pyproject.toml` (the source of truth). A root
+`requirements.txt` is also kept, containing only `-e .`, purely because
+Streamlit Community Cloud and Hugging Face Spaces auto-detect dependencies
+from a root `requirements.txt` file rather than `pyproject.toml` — it installs
+this project itself, so there's nothing to keep in sync by hand.
 
-Alternatively you can run the Plantmd on CyVerse Discovery Environment.
+## Getting started locally
 
->Note: You need to register to CyVerse before you can use. More information about user registration can be found [here](https://user.cyverse.org/)
+The model weights are stored with [Git LFS](https://git-lfs.com/) — install
+it once (`git lfs install`), then:
 
-After you register, you click the button below to launch Plantmd on CyVerse [Discovery Environment](https://de.cyverse.org/)
+```shell
+git clone https://github.com/upendrak/plantmd.git && cd plantmd
+git lfs pull
+pip install -e .[dev]
+streamlit run app.py
+```
 
-<a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=8e002616-e030-4ee1-bcaf-e6ce20986e14&app-id=c148e480-4fff-11ea-b1a6-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a>
+Open http://localhost:8501/ and upload an image (a few samples are in
+`example_images/`).
 
-<a href="https://www.loom.com/share/40aa6f0a4b1f4c4eb1aa7916a52e4d6f"> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/40aa6f0a4b1f4c4eb1aa7916a52e4d6f-with-play.gif"> </a>
+Run the test suite (works without the real model weights, using fakes/fixtures):
+
+```shell
+pytest
+```
+
+## Docker
+
+```shell
+git lfs pull   # make sure the real model weights are present before building
+docker build -t plantmd .
+docker run --rm -p 8501:8501 plantmd
+```
+
+Open http://localhost:8501/.
+
+## Streamlit Community Cloud / Hugging Face Spaces
+
+Both platforms can deploy directly from this repo:
+
+- **Streamlit Community Cloud**: point a new app at this repo, branch `main`,
+  main file `app.py`. It installs from `requirements.txt` automatically.
+- **Hugging Face Spaces**: create a Space with SDK "Streamlit", then use
+  [`docs/huggingface-space-readme.md`](docs/huggingface-space-readme.md) as a
+  starting template for that Space's own `README.md` (Spaces require SDK
+  metadata in the Space's README frontmatter, which is a separate file from
+  this repo's README). Make sure the Space has access to the real model
+  weights — either sync Git LFS objects or upload the weights file directly
+  through the Space's file interface.
+
+## License
+
+GPLv3 — see [LICENSE](LICENSE).

@@ -1,8 +1,39 @@
+label,description
 Apple Scab,Apple scab is a serious disease of apples and ornamental crabapples caused by Venturia inaequalis that attacks both leaves and fruit. The fungal disease forms pale yellow or olive-green spots on the upper surface of leaves.
-Apple Black rot,Black rot is a disease of apples that infects fruit, leaves and bark caused by the fungus Botryosphaeria obtusa. It can also jump to healthy tissue on pear or quince trees, but is typically a secondary fungus of weak or dead tissues in other plants.
+Apple Black rot,"Black rot is a disease of apples that infects fruit, leaves and bark caused by the fungus Botryosphaeria obtusa. It can also jump to healthy tissue on pear or quince trees, but is typically a secondary fungus of weak or dead tissues in other plants."
 Apple Cedar rust,Cedar apple rust is a fungal disease caused by Gymnosporangium juniperi-virginianae that requires juniper plants to complete its complicated two year life-cycle. Spores overwinter as a reddish-brown gall on young twigs of various juniper species.
 Apple healthy,No disease
 Blueberry healthy,No disease
-Cherry(Sour) Mildew,Powdery mildew of sweet and sour cherry is caused by Podosphaera clandestina, an obligate biotrophic fungus. Mid- and late-season sweet cherry (Prunus avium) cultivars are commonly affected, rendering them unmarketable due to the covering of white fungal growth on the cherry surface.
+Cherry(Sour) Mildew,"Powdery mildew of sweet and sour cherry is caused by Podosphaera clandestina, an obligate biotrophic fungus. Mid- and late-season sweet cherry (Prunus avium) cultivars are commonly affected, rendering them unmarketable due to the covering of white fungal growth on the cherry surface."
 Cherry(Sour) healthy,No disease
-Corn Leaf spot,Northern corn leaf spot mainly occurs on inbred lines used in seed production. The disease is rarely a problem on hybrids. Symptoms of this disease are sometimes confused with northern corn leaf blight, southern corn leaf blight, and anthracnose.
+Corn Leaf spot,"Northern corn leaf spot mainly occurs on inbred lines used in seed production. The disease is rarely a problem on hybrids. Symptoms of this disease are sometimes confused with northern corn leaf blight, southern corn leaf blight, and anthracnose."
+Corn Common rust,"[DRAFT] Corn common rust is caused by the fungus Puccinia sorghi. It produces small, oval to elongate cinnamon-brown pustules on both leaf surfaces, which can reduce photosynthetic area and yield in susceptible hybrids under cool, humid conditions."
+Corn Northern Leaf Blight,"[DRAFT] Northern corn leaf blight is caused by the fungus Exserohilum turcicum. It produces long, cigar-shaped gray-green to tan lesions on leaves that can coalesce and blight large areas of foliage in warm, humid weather."
+Corn healthy,No disease
+Grape Black rot,"[DRAFT] Grape black rot is caused by the fungus Guignardia bidwellii. It appears as small reddish-brown spots with dark borders on leaves and shrivels infected berries into hard, black 'mummies'."
+Grape Black measles,"[DRAFT] Also known as Esca, this is a complex grapevine trunk disease caused by several wood-rotting fungi. It produces tiger-stripe interveinal chlorosis and necrosis on leaves and can cause sudden vine collapse ('apoplexy')."
+Grape Leaf Blight,"[DRAFT] Also known as Isariopsis leaf spot, this disease is caused by the fungus Pseudocercospora vitis. It produces irregular reddish-brown spots on leaves that can merge and cause premature defoliation."
+Grape healthy,No disease
+Citrus greening,"[DRAFT] Citrus greening, or Huanglongbing, is a bacterial disease caused by Candidatus Liberibacter species and spread by the Asian citrus psyllid. It causes blotchy, mottled leaves, misshapen bitter fruit, and eventual tree decline; there is currently no cure."
+Peach Bacterial spot,"[DRAFT] Bacterial spot of peach is caused by Xanthomonas arboricola pv. pruni. It produces small, dark, angular lesions on leaves that may fall out leaving a 'shot-hole' appearance, along with sunken, pitted spots on fruit."
+Peach healthy,No disease
+Bell_Pepper Bacterial spot,"[DRAFT] Bacterial spot of pepper is caused by Xanthomonas species. It produces small, water-soaked spots on leaves that turn brown with yellow halos, and raised, scab-like spots on fruit."
+Bell_Pepper healthy,No disease
+Potato Early Blight,"[DRAFT] Early blight of potato is caused by the fungus Alternaria solani. It produces dark brown lesions with concentric rings, giving a 'target spot' pattern, usually starting on older leaves."
+Potato Late Blight,"[DRAFT] Late blight of potato is caused by the oomycete Phytophthora infestans, the pathogen behind the Irish potato famine. It produces water-soaked lesions with white fuzzy growth on the underside of leaves in humid conditions, and can kill foliage rapidly."
+Potato healthy,No disease
+Raspberry healthy,No disease
+Soybean healthy,No disease
+Squash Powdery mildew,"[DRAFT] Powdery mildew of squash is caused by fungi such as Podosphaera xanthii and Erysiphe cichoracearum. It appears as white, powdery fungal growth on leaf surfaces that reduces photosynthesis and yield."
+Strawberry Leaf scorch,"[DRAFT] Leaf scorch of strawberry is caused by the fungus Diplocarpon earlianum. It produces small purple spots on leaves that enlarge and merge, giving the foliage a scorched appearance."
+Strawberry healthy,No disease
+Tomato Bacterial spot,"[DRAFT] Bacterial spot of tomato is caused by Xanthomonas species. It produces small, water-soaked spots on leaves and fruit that turn brown and scabby over time."
+Tomato Early blight,"[DRAFT] Early blight of tomato is caused by the fungus Alternaria solani. It produces target-spot lesions with concentric rings, typically starting on lower, older leaves."
+Tomato Late blight,"[DRAFT] Late blight of tomato is caused by the oomycete Phytophthora infestans, the same pathogen that causes potato late blight. It produces rapidly expanding water-soaked lesions that can collapse the whole plant in humid weather."
+Tomato Leaf Mold,"[DRAFT] Leaf mold of tomato is caused by the fungus Passalora fulva. It produces pale green to yellow spots on the upper leaf surface with an olive-green to grayish-purple velvety mold on the underside, common in humid greenhouse conditions."
+Tomato Septoria leaf spot,"[DRAFT] Septoria leaf spot of tomato is caused by the fungus Septoria lycopersici. It produces small, circular spots with dark borders and tan centers dotted with tiny black fruiting bodies, usually starting on lower leaves."
+Tomato Two-spotted spider mite,"[DRAFT] Two-spotted spider mite (Tetranychus urticae) is a tiny arachnid pest, not a fungus or bacterium. Feeding causes stippled yellow speckling on leaves, with fine webbing visible under heavy infestations."
+Tomato Target Spot,"[DRAFT] Target spot of tomato is caused by the fungus Corynespora cassiicola. It produces brown lesions with concentric rings, similar in appearance to early blight, affecting leaves, stems, and fruit."
+Tomato Yellow Leaf Curl Virus,"[DRAFT] Tomato yellow leaf curl virus is a whitefly-transmitted geminivirus. It causes upward curling and yellowing of leaflet margins, stunted growth, and significant yield loss."
+Tomato mosaic virus,"[DRAFT] Tomato mosaic virus is a tobamovirus that causes mottled light and dark green mosaic patterns on leaves, leaf distortion, and stunting. It spreads easily through mechanical contact via contaminated tools or hands."
+Tomato healthy,No disease

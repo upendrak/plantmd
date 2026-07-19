@@ -1,5 +1,10 @@
 uploads/*.jpg
 uploads/*.png
-models/*.h5
-models/*.hdf5
-__pycache__
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+dist/
+*.egg-info/
