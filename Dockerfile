@@ -1,6 +1,6 @@
-# Build the model weights via `git lfs pull` before running `docker build .` —
-# .gitattributes tracks models/model_vgg16_2.hdf5 through Git LFS, and a plain
-# `git clone` only fetches the LFS pointer file, not the real weights.
+# The trained model weights aren't in this repo — src/plantmd/model.py
+# downloads them from Hugging Face Hub on first run and caches them under
+# models/, which is why that directory needs to be writable by appuser below.
 
 FROM python:3.11-slim-bookworm AS builder
 

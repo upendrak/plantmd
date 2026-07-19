@@ -32,9 +32,8 @@ app.py                          # Streamlit entrypoint
 src/plantmd/
   inference.py                  # preprocessing + top-k prediction
   descriptions.py                # disease description lookup
-  model.py                        # cached model loading
+  model.py                        # cached model loading (downloads from HF Hub)
 models/
-  model_vgg16_2.hdf5             # trained weights (Git LFS)
   disease_description.csv        # per-class description text
 tests/                           # pytest suite (no real model weights required)
 ```
@@ -45,19 +44,22 @@ Streamlit Community Cloud and Hugging Face Spaces auto-detect dependencies
 from a root `requirements.txt` file rather than `pyproject.toml` — it installs
 this project itself, so there's nothing to keep in sync by hand.
 
-## Getting started locally
+The trained model weights (`model_vgg16_2.hdf5`) are **not** committed to
+this repo. They're hosted on [Hugging Face Hub](https://huggingface.co/upendrak/plantmd)
+and downloaded automatically by `src/plantmd/model.py` the first time the app
+runs, then cached under `models/` for subsequent runs. No Git LFS involved.
 
-The model weights are stored with [Git LFS](https://git-lfs.com/) — install
-it once (`git lfs install`), then:
+## Getting started locally
 
 ```shell
 git clone https://github.com/upendrak/plantmd.git && cd plantmd
-git lfs pull
 pip install -e .[dev]
 streamlit run app.py
 ```
 
-Open http://localhost:8501/ and upload an image (a few samples are in
+The first run downloads the model weights from Hugging Face Hub (a one-time
+cost); after that they're read from the local `models/` cache. Open
+http://localhost:8501/ and upload an image (a few samples are in
 `example_images/`).
 
 Run the test suite (works without the real model weights, using fakes/fixtures):
@@ -69,26 +71,26 @@ pytest
 ## Docker
 
 ```shell
-git lfs pull   # make sure the real model weights are present before building
 docker build -t plantmd .
 docker run --rm -p 8501:8501 plantmd
 ```
 
-Open http://localhost:8501/.
+Open http://localhost:8501/. The container downloads the model weights from
+Hugging Face Hub on its first run (needs outbound internet access).
 
 ## Streamlit Community Cloud / Hugging Face Spaces
 
 Both platforms can deploy directly from this repo:
 
-- **Streamlit Community Cloud**: point a new app at this repo, branch `main`,
-  main file `app.py`. It installs from `requirements.txt` automatically.
+- **Streamlit Community Cloud**: point a new app at this repo, branch
+  `master`, main file `app.py`. It installs from `requirements.txt`
+  automatically, and the model weights download from Hugging Face Hub on
+  first run.
 - **Hugging Face Spaces**: create a Space with SDK "Streamlit", then use
   [`docs/huggingface-space-readme.md`](docs/huggingface-space-readme.md) as a
   starting template for that Space's own `README.md` (Spaces require SDK
   metadata in the Space's README frontmatter, which is a separate file from
-  this repo's README). Make sure the Space has access to the real model
-  weights — either sync Git LFS objects or upload the weights file directly
-  through the Space's file interface.
+  this repo's README).
 
 ## License
 
