@@ -10,7 +10,7 @@ import streamlit as st
 import tensorflow as tf
 from huggingface_hub import hf_hub_download
 
-HF_REPO_ID = "upendrak/plantmd"
+HF_REPO_ID = "upendrad/plantmd"
 
 
 @st.cache_resource(show_spinner="Loading model...")

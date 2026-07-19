@@ -33,6 +33,6 @@ See [github.com/upendrak/plantmd](https://github.com/upendrak/plantmd) for
 the full source and Docker/local setup instructions.
 
 The trained model weights are hosted separately on the
-[upendrak/plantmd](https://huggingface.co/upendrak/plantmd) model repo on
+[upendrad/plantmd](https://huggingface.co/upendrad/plantmd) model repo on
 Hugging Face Hub, and downloaded automatically the first time the app runs —
 nothing to sync or upload manually here.

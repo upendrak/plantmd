@@ -45,7 +45,7 @@ from a root `requirements.txt` file rather than `pyproject.toml` — it installs
 this project itself, so there's nothing to keep in sync by hand.
 
 The trained model weights (`model_vgg16_2.hdf5`) are **not** committed to
-this repo. They're hosted on [Hugging Face Hub](https://huggingface.co/upendrak/plantmd)
+this repo. They're hosted on [Hugging Face Hub](https://huggingface.co/upendrad/plantmd)
 and downloaded automatically by `src/plantmd/model.py` the first time the app
 runs, then cached under `models/` for subsequent runs. No Git LFS involved.
 
