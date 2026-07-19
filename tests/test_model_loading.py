@@ -2,7 +2,6 @@ from pathlib import Path
 from unittest.mock import Mock
 
 import pytest
-import tensorflow as tf
 
 from plantmd import model as model_module
 from plantmd.model import load_model
@@ -11,6 +10,8 @@ REAL_MODEL_PATH = Path(__file__).parent.parent / "models" / "model_vgg16_2.hdf5"
 
 
 def test_load_model_uses_existing_local_file_without_downloading(tmp_path, monkeypatch):
+    import tensorflow as tf
+
     local_path = tmp_path / "weights.hdf5"
     local_path.write_bytes(b"placeholder file, just needs to exist")
 

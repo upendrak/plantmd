@@ -1,7 +1,7 @@
 # PlantMD
 
 [![CI](https://github.com/upendrak/plantmd/actions/workflows/ci.yml/badge.svg)](https://github.com/upendrak/plantmd/actions/workflows/ci.yml)
-[![PyPI - Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue.svg)]()
+[![PyPI - Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 PlantMD is an image-based plant disease diagnosis web app. Upload a photo of a
@@ -48,6 +48,12 @@ The trained model weights (`model_vgg16_2.hdf5`) are **not** committed to
 this repo. They're hosted on [Hugging Face Hub](https://huggingface.co/upendrad/plantmd)
 and downloaded automatically by `src/plantmd/model.py` the first time the app
 runs, then cached under `models/` for subsequent runs. No Git LFS involved.
+
+The weights are an old-style HDF5 file saved with Keras 2. TensorFlow 2.16+
+switched `tf.keras` to Keras 3 by default, which can't load that format, so
+`tf-keras` is pinned alongside `tensorflow` and `src/plantmd/__init__.py`
+sets `TF_USE_LEGACY_KERAS=1` to keep `tf.keras` on the legacy Keras 2
+implementation that can still read it.
 
 ## Getting started locally
 
